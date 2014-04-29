@@ -1,5 +1,5 @@
 /* jshint unused:false */
-/* global _:true */
+/* global _:true, moment:true */
 
 (function(){
   'use strict';
@@ -7,12 +7,11 @@
   $(document).ready(init);
 
   function init(){
-    $('#go').click(moment);
+    $('#go').click(moment1);
   }
 
-  function moment(){
-    var userInput = $('#input').val();
-    var userOutput = moment(userInput, 'YYYYMMDD').fromNow();
+  function moment1(){
+    var userOutput = moment($('#input').val()).fromNow();
     $('#output').text(userOutput);
 
   }
